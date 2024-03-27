@@ -7,10 +7,21 @@
 //     containerWatch.innerHTML = time;
 // })
 
-const containerWatch = document.getElementById("watch")
+const WatchDiv = document.getElementById("watch");
+const daysDiv = document.getElementById("days");
 
-    function watch () {
-    let currentDate = new Date();
-    containerWatch.innerHTML = currentDate.toLocaleTimeString();
+
+    function DisplayTime () {
+    let currentHour = new Date();
+    WatchDiv.innerHTML = currentHour.toLocaleTimeString();
 }
-setInterval(watch,1000);
+setInterval(DisplayTime,1000);
+
+
+ function DisplayDate () {
+     let currentDate = new Date();
+     daysDiv.innerHTML = currentDate.toDateString();
+     document.getElementById("days").innerHTML = text;
+ }
+
+ DisplayDate()
